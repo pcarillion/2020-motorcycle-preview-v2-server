@@ -1,0 +1,80 @@
+{{!-- {{!-- <h2>Watch all bikes that are coming in 2020!</h2> --}} --}}
+
+<aside id="filterAside" class="">
+    <img src="./../images/logo-menu.png" alt="">
+    <div>
+    <p id="filterButton">Filters</p>
+        <section id="filtersSection" class="hidden button-group filter-button-group">
+            <p>Filter by Brand</p>
+            <div id="brandButtons" class="buttonGroup" data-filter-group="brand">
+                <button data-filter="*">All</button>
+                <button data-filter=".Aprilia">Aprilia</button>
+                <button data-filter=".Arch">Arch</button>
+                <button data-filter=".BMW">BMW</button>
+                <button data-filter=".Ducati">Ducati</button>
+                <button data-filter=".Guzzi">Guzzi</button>
+                <button data-filter=".Harley">Harley</button>
+                <button data-filter=".Honda">Honda</button>
+                <button data-filter=".Indian">Indian</button>
+                <button data-filter=".Kawasaki">Kawasaki</button>
+                <button data-filter=".KTM">KTM</button>
+                <button data-filter=".MV">MV</button>
+                <button data-filter=".Suzuki">Suzuki</button>
+                <button data-filter=".Triumph">Triumph</button>
+                <button data-filter=".Yamaha">Yamaha</button>
+            </div>
+            <p>Filter by Engine</p>
+            <div id="engineButtons" class="buttonGroup" data-filter-group="engine">
+                <button data-filter="*">All</button>
+                <button data-filter=".smallEngine">Petite cylindrée (&lt;500)</button>
+                <button data-filter=".midEngine">Moyenne cylindrée (&lt;800)</button>
+                <button data-filter=".bigEngine">Grosse cylindrée (&gt;800)</button>
+            </div>
+            <p>Filter by Type</p>
+            <div id="typeButtons" class="buttonGroup" data-filter-group="type">
+                <button data-filter="*">All</button>
+                <button data-filter=".Sportbike">Sportbike</button>
+                <button data-filter=".Dual-sport">Dual-sport</button>
+                <button data-filter=".Cruiser">Cruiser</button>
+                <button data-filter=".Touring">Touring</button>
+                <button data-filter=".Roadster">Roadster</button>
+                <button data-filter=".Standard-retro">Standard-Retro</button>
+            </div>
+            <p>Available for A2</p>
+            <div id="a2Buttons" class="buttonGroup" data-filter-group="type">
+                <button data-filter="*">All</button>
+                <button data-filter=".A2">Available for A2</button>
+            </div>
+        </section>
+     </div>
+     <div>
+        <p id="sortButton">Sorts</p>
+        <section id="sortButtons" class="hidden">
+            <button data-sort-value="brand">Sort by Brand</button data-sort-value="">
+            <button data-sort-value="engine">Sort by Engine</button>
+            <button data-sort-value="price">Sort by Price</button>
+        </section>
+     </div>
+</aside>
+
+<aside>
+
+</aside>
+
+<div id="bike-collection">
+{{#each bikes}}
+<div class="bike-container {{this.brand}} {{this.type}} {{#createEngineClass this.engine}}{{/createEngineClass}} {{#createA2Class this.A2}}{{/createA2Class}}">
+    <div class="image-border">
+        <div class="bike-image" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.1), rgba(10, 1, 8, 0.6)), url('{{this.image}}');">
+        </div>
+    </div>
+    
+    <div class="bike-infos">
+            <p class="name"><span class="brand">{{this.brand}}</span> {{this.name}}</p>
+            <p><span class="engine">{{this.engine}}</span>cc</p>
+            <p><span class="price">{{this.price}}</span>€</p>
+            <p class="details"><a href="one-bike-{{this.id}}">See details ></a></p>
+    </div>
+</div>
+{{/each}}
+</div>

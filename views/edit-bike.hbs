@@ -1,0 +1,60 @@
+<div class="edit-container">
+    <form action="/admin/edit/{{bike._id}}" method="POST" class="edit-form">
+        <h2>Edit : {{bike.brand}} {{bike.name}}</h2>
+        <div class="adminInputs">
+            <div class="adminForm-left">
+                <label for="name">Model</label>
+                <input type="text" name="name" value="{{bike.name}}">
+
+                <label for="brand">Brand</label>
+                <input type="text" name="brand" value="{{bike.brand}}">
+
+                <label for="engine">Engine (cc)</label>
+                <input type="number" name="engine" value="{{bike.engine}}">
+
+                <label for="horsepower">Horsepower</label>
+                <input type="number" name="horsepower" value="{{bike.horsepower}}">
+
+                <label for="price">Price</label>
+                <input type="number" name="price" value="{{bike.price}}">
+
+                <label for="type">Type</label>
+                <select name="type" class="select-biketype">
+                    <option value="Cruiser">Cruiser</option>
+                    <option value="Touring">Touring</option>
+                    <option value="Roadster">Roadster</option>
+                    <option value="Sportbike">Sportbike</option>
+                    <option value="Dual-sport">Dual-sport</option>
+                    <option value="Standard-retro">Standard-retro</option>
+                </select>
+
+                <label for="A2">Available for A2</label>
+                <input type="checkbox" name="A2" class="checkA2">
+            </div>
+            <div class="adminForm-right">
+
+                {{!-- <label for="usage">Usage</label>
+                <input type="text" name=""> --}}
+
+                <label for="description">Description</label>
+                <textarea type="text" name="description" cols="80" rows="5">
+                    {{bike.description}}
+                </textarea>
+
+                <label for="link">Link to the brand's website</label>
+                <input type="url" name="link" value="{{bike.link}}">
+
+                <label for="image">Link for first image</label>
+                <input type="link" name="image" value="{{bike.image}}">
+
+                <label for="gallery">Add more images</label>
+                {{#each bike.gallery}}
+                <input class="galleryInput" type="link" name="gallery" value="{{this}}">
+                {{/each}}
+            </div>
+        </div>
+
+        <button class="edit-btn">EDIT</button>
+        {{!-- <input type="submit" value="Add !"> --}}
+    </form>
+</div>

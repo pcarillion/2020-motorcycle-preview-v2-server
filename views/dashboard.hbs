@@ -1,0 +1,41 @@
+<div class="dashboard">
+    <h2>Welcome back M. ADMIN</h2>
+    <form action="/admin/create" method="get"><button class="admin-createBtn">ADD A BIKE</button></form>
+
+    <table class="adminTable">
+        <thead class="tableTitle">
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Engine</th>
+                <th>Horsepower</th>
+                <th>Available for A2</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#unless bikes}}
+            <tr>
+                <td colspan="4">No bikes yet</td>
+            </tr>
+            {{/unless}}
+
+            {{#each bikes}}
+            <tr class="admin-bikeRow">
+                <td><a href="/one-bike-{{this._id}}" target="_blank">{{this.brand}}</a></td>
+                <td><a href="/one-bike-{{this._id}}" target="_blank">{{this.name}}</a></td>
+                <td><a href="/one-bike-{{this._id}}" target="_blank">{{this.type}}</a></td>
+                <td><a href="/one-bike-{{this._id}}" target="_blank">{{this.engine}}cc</a></td>
+                <td><a href="/one-bike-{{this._id}}" target="_blank">{{this.horsepower}}</a></td>
+                <td><a href="/one-bike-{{this._id}}" target="_blank">{{this.A2}}</a></td>
+                <td><a href="/one-bike-{{this._id}}" target="_blank">{{this.price}}€</a></td>
+                <td><a href="/admin/edit/{{this._id}}">EDIT</a></td>
+                <td><a href="/admin/delete/{{this._id}}">X</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

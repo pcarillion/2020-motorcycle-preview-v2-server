@@ -1,0 +1,60 @@
+<div class="create-container">
+    <form action="/admin/create" method="POST" class="create-form">
+        <h2>Add a new bike !</h2>
+        <div class="adminInputs">
+            <div class="adminForm-left">
+                <label for="name">Model</label>
+                <input type="text" name="name" value="bikeDeFoo">
+
+                <label for="brand">Brand</label>
+                <input type="text" name="brand" value="fooBrand">
+
+                <label for="engine">Engine (cc)</label>
+                <input type="number" name="engine" value="3000">
+
+                <label for="horsepower">Horsepower</label>
+                <input type="number" name="horsepower" value="3000">
+
+                <label for="price">Price</label>
+                <input type="number" name="price" value="1000000">
+
+                <label for="type">Type</label>
+                <select name="type" class="select-biketype">
+                    <option value="Cruiser">Cruiser</option>
+                    <option value="Touring">Touring</option>
+                    <option value="Roadster">Roadster</option>
+                    <option value="Sportbike">Sportbike</option>
+                    <option value="Dual-sport">Dual-sport</option>
+                    <option value="Standard-retro">Standard-retro</option>
+                </select>
+
+                <label for="A2">Available for A2</label>
+                <input type="checkbox" name="A2" class="checkA2">
+            </div>
+            <div class="adminForm-right">
+
+                {{!-- <label for="usage">Usage</label>
+                <input type="text" name=""> --}}
+
+                <label for="description">Description</label>
+                <textarea type="text" name="description" value="bikeDeFoo" cols="60" rows="4"></textarea>
+
+                <label for="link">Link to the brand</label>
+                <input type="url" name="link" value="https://media3.giphy.com/media/hR75u5wijqcs7RIavZ/giphy.gif">
+
+                <label for="image">Link for image</label>
+                <input type="url" name="image" value="https://media3.giphy.com/media/hR75u5wijqcs7RIavZ/giphy.gif">
+
+                <label for="gallery">Add more images</label>
+                <input class="galleryInput" type="url" name="gallery" value="">
+                <input class="galleryInput" type="url" name="gallery" value="">
+                <input class="galleryInput" type="url" name="gallery" value="">
+
+
+            </div>
+        </div>
+
+        <button class="create-btn">CREATE</button>
+        {{!-- <input type="submit" value="Add !"> --}}
+    </form>
+</div>

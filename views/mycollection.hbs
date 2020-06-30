@@ -1,0 +1,15 @@
+<div id="my-collection-div">
+    <div>
+        {{#each bikes}}
+            <div>
+                <div class="my-bike-image" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.1), rgba(10, 1, 8, 0.6)), url('{{this.image}}');">
+                </div>
+                <a href="one-bike-{{this.id}}">
+                    <p class="my-bike-name">
+                        {{this.name}}
+                    </p>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+</div>

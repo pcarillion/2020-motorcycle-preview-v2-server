@@ -1,0 +1,32 @@
+<nav>
+    <div id="nav-left">
+        <a href="/index">HOME</a>
+        <a href="/collection">2020 COLLECTIONS</a>
+    </div>
+
+    {{#unless isAdmin}}
+    <div id="nav-middleNoAdmin">
+        <a href="/my-collection">MY BIKES</a>
+    </div>
+    {{/unless}}
+
+    {{#if isAdmin}}
+    <div id="nav-middleAdmin">
+        <a href="/my-collection">MY BIKES</a>
+        <a href="/admin/dashboard">DASHBOARD</a>
+    </div>
+    {{/if}}
+
+    {{#unless isLoggedIn}}
+    <div id="nav-rightNotLoggedIn">
+        <a href="/auth/signin">LOG IN</a>
+        <a href="/auth/signup">SIGN UP</a>
+    </div>
+    {{/unless}}
+
+    {{#if isLoggedIn}}
+    <div id="nav-rightLoggedIn">
+        <a href="/auth/signout">LOG OUT</a>
+    </div>
+    {{/if}}
+</nav>

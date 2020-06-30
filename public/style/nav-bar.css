@@ -1,0 +1,14 @@
+#nav-middleNoAdmin {
+    display: flex;
+    justify-content: center;
+}
+
+#nav-middleAdmin {
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-rightLoggedIn {
+    display: flex;
+    justify-content: flex-end;
+}

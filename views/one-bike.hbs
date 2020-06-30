@@ -1,0 +1,48 @@
+<div id="one-bike-image">
+    <div id="one-bike-image-container">
+        <img src="{{bike.image}}" alt="" srcset="">
+    </div>
+</div>
+
+<div id="transition"></div>
+<div id="one-bike-details">
+    <div>
+        <h2>{{bike.brand}} {{bike.name}}</h2>
+        <p>{{bike.description}}</p>
+        <table id="details-table">
+            <tbody>
+                <tr>
+                    <td>Bike's type</td>
+                    <td>{{bike.type}}</td>
+                </tr>
+                <tr>
+                    <td>Engine</td>
+                    <td>{{bike.engine}} cc</td>
+                </tr>
+                <tr>
+                    <td>Horsepower</td>
+                    <td>{{bike.horsepower}} hp</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>{{bike.price}} €</td>
+                </tr>
+                <tr>
+                    <td>Available for A2</td>
+                    <td>{{bike.A2}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="{{bike.link}}">See more on the brand's website</a></p>
+        {{#isFavourited bike._id user.favorites}}
+    
+        {{/isFavourited}}
+        
+        <p>Gallery</p>
+        <div id="gallery">
+        {{#each bike.gallery}}
+            <img src="{{this}}" alt="" class="photo-in-the-gallery">
+        {{/each}}
+        </div>
+    </div>
+</div>
