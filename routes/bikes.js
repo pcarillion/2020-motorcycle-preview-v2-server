@@ -20,6 +20,8 @@ router.get("/collection", (req, res, next) => {
 
 router.get("/one-bike-:id", (req, res, next)=> {
 
+  console.log(req.params.id)
+
   bikeModel
   .findById(req.params.id)
   .then(bike => 
