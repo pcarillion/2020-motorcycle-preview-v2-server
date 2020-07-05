@@ -4,31 +4,22 @@ const userModel = require("../models/User");
 const bcryptjs = require("bcryptjs"); // intro to bcrypt hashing algorithm https://www.youtube.com/watch?v=O6cmuiTBZVs
 const session = require("express-session");
 
-// GO TO THE SIGNUP FORM TO REGISTER
-router.get("/signup", (req, res) => {
-  res.render("auth/signup");
-});
-
-/* GO TO THE SIGNIN FORM TO LOG IN */
-router.get("/signin", (req, res, next) => {
-  res.render("auth/signin");
-});
 
 /* ACTION : REGISTER */
 router.post("/signup", (req, res, next) => {
   const user = req.body // req.body contains submited infos
 
+  console.log(user)
   if (!user.mail || !user.password) {
     console.log("ERROR! You have to fill the form entirely!")
-    return res.redirect("/auth/signup");
+    return res.status(403).json("ERROR! You have to fill the form entirely!");
   } else {
     userModel
     .findOne({mail: user.mail})
     .then(dbRes => {
       if (dbRes) {
         console.log("ERROR! Sorry, this email is already taken!");
-        res.redirect("/auth/signup");
-        return;
+        return res.status(403).json("ERROR! Sorry, this email is already taken!");;
       }
 
       const salt = bcryptjs.genSaltSync(10);
@@ -41,12 +32,13 @@ router.post("/signup", (req, res, next) => {
       userModel
       .create(user)
       .then(() => {
-        res.redirect("/auth/signin");
         console.log("SUCCESS! A new user has been created!");
+        res.status(200).json({msg: "signup ok"});
       })
     })
     .catch(dbErr => {
       console.log("ERROR! ", dbErr);
+      next(err);
     })
   }
 })
@@ -60,8 +52,7 @@ router.post("/signin", (req, res, next) => {
 
   if (!user.mail || !user.password){
     console.log("ERROR! Wrong credentials.")
-    res.redirect("/auth/signin");
-    return;
+    return res.status(403).json("invalid user infos");;
   }
 
   userModel
@@ -69,8 +60,8 @@ router.post("/signin", (req, res, next) => {
   .then(dbRes => {
     if(!dbRes) {
       // !dbRes means that no user has been found with this mail
-      console.log("ERROR! Wrong credentials..........");
-      res.redirect("/auth/signin");
+      console.log("This email was not found...");
+      return res.json({ message: "This email was not found..." });
       return;
     }
     // case 2: user has been found in db
@@ -84,13 +75,12 @@ router.post("/signin", (req, res, next) => {
       // until session.destroy
       // could be req.session.totoFriends = clone;
       console.log("WELCOME! You've been logged successfully!");
-      res.redirect("/collection");
+      res.status(200).send("success, you've been logged in")
       return;
     } else {
       // encrypted password match failed
       console.log("ERROR! WRONG CREDENTIALS!!!")
-      res.redirect("/auth/signin");
-      return;
+      return res.json({ message: "The password is wrong" });;
     }
   })
   .catch(dbErr => {
