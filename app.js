@@ -9,6 +9,9 @@ const session = require("express-session");
 const mongoose = require("mongoose");
 const dbconnect = require("dbconnect");
 const cors = require("cors");
+const passport = require("passport");
+require("./config/passport");
+
 
 // MONGOOSE CONFIG
 mongoose
@@ -48,7 +51,8 @@ app.use(cors(corsOptions))
 app.use(require("./middlewares/exposeLoginStatus"));
 
 // ROUTING
-
+app.use(passport.initialize());
+app.use(passport.session());
 
 // export the app (check import ./bin/www)
 app.get("/", (req, res) => {res.send("hello world")})
