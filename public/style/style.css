@@ -1,493 +1,459 @@
 @font-face {
-    font-family: "Blender Pro"; 
-    src: url("/db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot");
+  font-family: "Blender Pro";
+  src: url("/db.onlinewebfonts.com/t/a082fd3df68a0b54e0d4d794bc38d268.eot");
 }
 
-@import url('//db.onlinewebfonts.com/c/a082fd3df68a0b54e0d4d794bc38d268?family=Blender+Pro');
+@import url("//db.onlinewebfonts.com/c/a082fd3df68a0b54e0d4d794bc38d268?family=Blender+Pro");
 
 @font-face {
-    font-family: "Roboto";
-    src: url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 }
 
 * {
-    font-family: "Blender Pro", "Roboto";
-    z-index: 50;
+  font-family: "Blender Pro", "Roboto";
+  z-index: 50;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
-
 body {
-    margin: 0;
-    padding: 0;
-    -ms-overflow-style: none;
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
 }
 
 body::-webkit-scrollbar {
-    display: none;
-  }
-
+  display: none;
+}
 
 nav {
-    width: 100vw;
-    height: 50px;
-    background-color: #F5251F;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 51;
-    box-shadow: 3px 0 10px 5px black;
+  width: 100vw;
+  height: 50px;
+  background-color: #f5251f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 51;
+  box-shadow: 3px 0 10px 5px black;
 }
 
 nav > div {
-    display: flex;
-    justify-content: space-between;
-    width: 20%;
-    margin: 5%;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin: 5%;
 }
 
 nav > div > a {
-    color: white; 
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 nav > div > a:hover {
-    color: black;
+  color: black;
 }
 
 footer {
-    background-color: #F5251F;
-    width: 100vw;
-    height: 25px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 0;
-    z-index: 51;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: -3px 0 10px 5px black;
+  background-color: #f5251f;
+  width: 100vw;
+  height: 25px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  z-index: 51;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: -3px 0 10px 5px black;
 }
 
 footer > p {
-    color: white;
-    font-size: 2vh;
-    margin: 0;
+  color: white;
+  font-size: 2vh;
+  margin: 0;
 }
 
 footer > button {
-    background-color: #F5251F;
-    height: 100%;
-    color: white;
-    border-style: none;
-    border: none;
+  background-color: #f5251f;
+  height: 100%;
+  color: white;
+  border-style: none;
+  border: none;
 }
 
 footer > button:hover {
-    color: black;
-} 
-
+  color: black;
+}
 
 /* Home */
 
-
 #videoDiv {
-    height: calc(100vh - 50px - 25px);
-    position: relative;
-    /* margin-top: 3.5vh; */
-    background: black;
-    padding-top: 50px;
-    z-index: 1;
-    -ms-overflow-style: none;
-    /* padding-top: 3vh; */
+  height: calc(100vh - 50px - 25px);
+  position: relative;
+  /* margin-top: 3.5vh; */
+  background: black;
+  padding-top: 50px;
+  z-index: 1;
+  -ms-overflow-style: none;
+  /* padding-top: 3vh; */
 }
 
-#videoDiv video{
-    display:block;
-    height: 100%;
-    width:100%;
+#videoDiv video {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 #videoDiv::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
 
 #videoBlock {
-    width: 100%; 
-    height: 100%;  
-    display: flex;  
-    justify-content: center; 
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #title {
-    position: absolute;
-    top: 45%;
-    left:65%;
-    color: red;
-    font-size: 30px;
-    border-top: 1px red solid;
-    border-bottom: 1px red solid;
-    z-index: 999;
-    filter: drop-shadow(5px 5px 5px black)
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  color: #c00;
+  font-size: 30px;
+  border-top: 1px #c00 solid;
+  border-bottom: 1px #c00 solid;
+  z-index: 999;
+  filter: drop-shadow(5px 5px 5px black);
 }
 
 #title:hover {
-    color: white;
-    border-top: 1px white solid;
-    border-bottom: 1px white solid;
+  color: white;
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
 }
-
-
-
 
 /* Collection */
 
-
 #bike-collection {
-    /* padding-top: vh; */
-    display: flex;
-    flex-direction: column;
+  /* padding-top: vh; */
+  display: flex;
+  flex-direction: column;
 }
 
 .redBackground {
-    background-color: #F5251F;
+  background-color: #f5251f;
 }
 
 .redBackground p {
-    color: white
+  color: white;
 }
 
 .redBackground a {
-    color: white;
+  color: white;
 }
 
 .bike-container {
-    height: 70vh;
-    width: 100%;
-    display: flex;
-    z-index: 5 !important;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  z-index: 5 !important;
 }
-
 
 .bike-infos {
-    width: 45%;
-    background-color: none;
-    z-index: 1;
-    padding: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 45%;
+  background-color: none;
+  z-index: 1;
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 
 .name {
-    font-size: 6vh;
-    margin: 0;
+  font-size: 6vh;
+  margin: 0;
 }
 
-.engine, .price {
-    font-size: 4vh;
-    margin: 0;
+.engine,
+.price {
+  font-size: 4vh;
+  margin: 0;
 }
 
-.details a{
-    font-size: 4vh;
-    letter-spacing: 0;
-    transition: letter-spacing 0.5s;
-    /* color: black; */
+.details a {
+  font-size: 4vh;
+  letter-spacing: 0;
+  transition: letter-spacing 0.5s;
+  /* color: black; */
 }
 
 .details a:hover {
-    letter-spacing: 3px;
+  letter-spacing: 3px;
 }
 
 .bike-image:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
-
-
 .image-border {
-    width: 55%;
-    z-index: auto;
-    background-color: black;
-    overflow: hidden;
+  width: 55%;
+  z-index: auto;
+  background-color: black;
+  overflow: hidden;
 }
 
 .bike-image {
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-size: cover;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-size: cover;
 }
 
-        /* Aside hidden */
+/* Aside hidden */
 
 #filterAside {
-    position: fixed;
-    top: 70px;
-    right: 0;
-    /* transform: translateX(0); */
-    z-index: 51;
-    width: 60px;
-    height: 60px;
-    transition: transform    0.5s;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  /* transform: translateX(0); */
+  z-index: 51;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.5s;
 }
 
 #filterAside section {
-    display: none;
+  display: none;
 }
 
 #filterAside p {
-    display: none;
+  display: none;
 }
 
 #filterAside img {
-    width: 60px;
-    height: 60px;
-} 
+  width: 60px;
+  height: 60px;
+}
 
-        /* Aside displayed */
+/* Aside displayed */
 
 #filterAside:hover img {
-    display: none;
+  display: none;
 }
 
 #filterAside:hover {
-    background-color: #F5251F;
-    height: 70vh;
-    width: 30vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /* transform: translateX(-30vw); */
-    /* padding: 2%; */
-    box-shadow: 5px 5px 5px black;
-    /* box-shadow: -3px 0 -10px -5px black; */
-    padding: 10px 2vh;
-    /* -web-kit-transition: -webkit-transform 0.5s; */
-
+  background-color: #f5251f;
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* transform: translateX(-30vw); */
+  /* padding: 2%; */
+  box-shadow: 5px 5px 5px black;
+  /* box-shadow: -3px 0 -10px -5px black; */
+  padding: 10px 2vh;
+  /* -web-kit-transition: -webkit-transform 0.5s; */
 }
 
 #filterAside:hover > div {
-    width: 13vw;
-    display: flex;
-    flex-direction: column;
-    /* height: 20%; */
-    overflow-x: hidden;
-    -ms-overflow-style: none;
-    align-items: center;
+  width: 13vw;
+  display: flex;
+  flex-direction: column;
+  /* height: 20%; */
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  align-items: center;
 }
-
 
 #filterAside:hover > div p {
-    display: block;
+  display: block;
 }
 
-#filterAside:hover section{
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    -ms-overflow-style: none;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
+#filterAside:hover section {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
 }
 
 #filterAside:hover #filtersSection div {
-    width: 100%;
-    align-items: center;
-    /* height: 50px; */
-    overflow-x: hidden;
-    background-color: white;
+  width: 100%;
+  align-items: center;
+  /* height: 50px; */
+  overflow-x: hidden;
+  background-color: white;
 }
 
 #filterAside:hover #brandButtons {
-    height: 60px;
+  height: 60px;
 }
 
 #filterAside:hover #engineButtons {
-    height: 40px;
+  height: 40px;
 }
 
 #filterAside:hover #typeButtons {
-    height: 60px;
+  height: 60px;
 }
 
 #filterAside:hover #a2Buttons {
-    height: 40px;
+  height: 40px;
 }
 
 #filterAside:hover button {
-    background-color: white;
-    border:none;
-    width: 100%;
-    padding: 1%;
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 1%;
 }
-
 
 #filterAside:hover p {
-    color: white;
-    text-align: center;
-    margin: 0;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
-
 
 #filterAside:hover div::-webkit-scrollbar {
-    width: 5%;
-  }
-
-  #filterAside:hover div::-webkit-scrollbar-track {
-    background-color: white;
+  width: 5%;
 }
-   
-#filterAside:hover div::-webkit-scrollbar-thumb {
-    background: black; 
-    /* border-radius: 10px; */
-    margin: 1px;
-  }
- 
-  #filterAside:hover div::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
-  }
 
+#filterAside:hover div::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+#filterAside:hover div::-webkit-scrollbar-thumb {
+  background: black;
+  /* border-radius: 10px; */
+  margin: 1px;
+}
+
+#filterAside:hover div::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
 
 #filterAside:hover section button:hover {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
 }
 
 #filterAside:hover .is-checked {
-    background-color: #b30000;
-    color: white;
+  background-color: #b30000;
+  color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* One bike page */
 
 #one-bike-image {
-    padding-top: 7vh;
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+  padding-top: 7vh;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 #one-bike-image-container {
-    height: 100%;
-    /* z-index: 2; */
-    /* width: auto; */
+  height: 100%;
+  /* z-index: 2; */
+  /* width: auto; */
 }
 
 #one-bike-image img {
-    height: 100%;
-    z-index: 1;
-    /* background-image: radial-gradient(rgba(10, 1, 8, 0.1), rgba(245, 246, 252, 1)); */
-
+  height: 100%;
+  z-index: 1;
+  /* background-image: radial-gradient(rgba(10, 1, 8, 0.1), rgba(245, 246, 252, 1)); */
 }
 
 #transition {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 100px 1280px;
-    border-color: transparent transparent #e5e5e5;
-    margin-top: 5vh;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 1280px;
+  border-color: transparent transparent #e5e5e5;
+  margin-top: 5vh;
 }
 
 #one-bike-details {
-    background-color: #e5e5e5;
-    width: 100%;
-    /* height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #e5e5e5;
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #one-bike-details > div {
-    display: flex;
-    flex-direction: column;
-    height: 90%;
-    width: 50%;
-    /* border: solid black 1px; */
-    padding: 2%;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 50%;
+  /* border: solid black 1px; */
+  padding: 2%;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 #one-bike-details p {
-    text-align: justify;
+  text-align: justify;
 }
 
 #one-bike-details table {
-    height: 30vh;
-    width: 50%;
-    border-collapse: collapse;
+  height: 30vh;
+  width: 50%;
+  border-collapse: collapse;
 }
-
 
 #one-bike-details td {
-    border: lightgrey solid 1px;
-    padding: 2%
+  border: lightgrey solid 1px;
+  padding: 2%;
 }
 
-
-
 #one-bike-details a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #gallery {
-    height: 80vh;
-    width: 90vw;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    overflow-y: hidden;
-    /* flex-wrap: wrap; */
-    -ms-overflow-style: none;
+  height: 80vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  overflow-y: hidden;
+  /* flex-wrap: wrap; */
+  -ms-overflow-style: none;
 }
 
 #gallery::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
 
 .photo-in-the-gallery {
-    height: 70vh;
-    /* width: auto; */
-    margin: 2%;
+  height: 70vh;
+  /* width: auto; */
+  margin: 2%;
 }
 /* 
 .photo-in-gallery img {
@@ -495,148 +461,136 @@ footer > button:hover {
     width: 100%;
 } */
 
-
-#one-bike-details  button {
-    background-color: red;
-    color: white;
-    border: none;
-    font-size: 1em;
-    padding: 5%;
-    width: 200px;
+#one-bike-details button {
+  background-color: #c00;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 5%;
+  width: 200px;
 }
 
-#one-bike-details button:hover  {
-    background-color: black;
-    cursor: pointer;
+#one-bike-details button:hover {
+  background-color: black;
+  cursor: pointer;
 }
-
-
-
 
 /* signin and signup */
 
-
-
 .backgroundSign {
-    background-image: url("./../images/background2.png");
-    background-size: cover;
-    z-index: -1;
-    height: 100vh;
-    width: 100vw;
-    /* position: absolute; */
-    top: 0;
+  background-image: url("./../images/background2.png");
+  background-size: cover;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  /* position: absolute; */
+  top: 0;
 }
 
 .form {
-    height: 30vh;
-    width: 25vw;
-    position: absolute;
-    left: 20vh;
-    top: 10vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #F5251F;
-    display: flex;
-    flex-direction: column;
-    padding: 5%;   
-    z-index: 2;
+  height: 30vh;
+  width: 25vw;
+  position: absolute;
+  left: 20vh;
+  top: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5251f;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  z-index: 2;
 }
 
-.form label, .form h2, .form p, .form a{
-    color: white;
+.form label,
+.form h2,
+.form p,
+.form a {
+  color: white;
 }
 
 .form > * {
-    margin: 2%;
+  margin: 2%;
 }
 
 .form a:hover {
-    color: black;
+  color: black;
 }
 
 .backgroundSign input {
-    width: 10vw;
-    height: 3vh;
-    border: none;
-    padding: 1vh;
+  width: 10vw;
+  height: 3vh;
+  border: none;
+  padding: 1vh;
 }
 
 .form button {
-    border: none;
+  border: none;
 }
 
 .form button:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .borderDecalee {
-    border-right: #F5251F solid 2px;
-    border-bottom: #F5251F solid 2px;
-    border-top: black solid 2px;
-    border-left: black solid 2px;
-    height: 30vh;
-    width: 25vw;
-    padding: 5%;
-    position:absolute;
-    left: 20vh;
-    top: 10vw;
-    margin: 1% -1% -1% 1%; 
-    z-index: 1;   
+  border-right: #f5251f solid 2px;
+  border-bottom: #f5251f solid 2px;
+  border-top: black solid 2px;
+  border-left: black solid 2px;
+  height: 30vh;
+  width: 25vw;
+  padding: 5%;
+  position: absolute;
+  left: 20vh;
+  top: 10vw;
+  margin: 1% -1% -1% 1%;
+  z-index: 1;
 }
-
-
-
-
-
 
 /* my collection */
 
-#my-collection-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 12vh 12vw;
+#my-collection-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12vh 12vw;
 }
 
 #my-collection-div > div {
-
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
-
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #my-collection-div > div > div {
-    width: 20vw;
-    height: 45vh;
-    display: flex;
-    flex-direction: column;
-    border: lightgrey solid 0.5px;
-    margin: 1vw;
+  width: 20vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  border: lightgrey solid 0.5px;
+  margin: 1vw;
 }
 
 .my-bike-image {
-    /* margin: 10px; */
-    height: 20vw;
-    background-size: cover;
+  /* margin: 10px; */
+  height: 20vw;
+  background-size: cover;
 }
 
 .my-bike-name {
-    width: 100%;
-    height: 2vh;
-    text-align: center;
-    margin: 0;
-    padding: 10px 0;
+  width: 100%;
+  height: 2vh;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
 }
 
-
-#my-collection-div > div > div:hover .my-bike-name{
-    background-color: black;
-    color: white;
-    cursor: pointer;
+#my-collection-div > div > div:hover .my-bike-name {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
